@@ -1,0 +1,222 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
+<meta name="color-scheme" content="dark">
+<title>Happy Birthday, Nour Brother</title>
+<link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:wght@600;700&family=Inter:wght@400;500;600&display=swap" rel="stylesheet">
+<style>
+:root{color-scheme:dark;--bg:#060c24;--bg2:#0b1538;--card:#101c4a;--line:#24357a;--ink:#eef3ff;--soft:#9fb0e6;--gold:#ffd166;--sky:#6ec6ff;
+box-sizing:border-box;padding-top:env(safe-area-inset-top,0px);padding-bottom:env(safe-area-inset-bottom,0px)}
+html{scroll-padding-top:env(safe-area-inset-top,0px);scroll-behavior:smooth}
+*{box-sizing:border-box}
+body{margin:0;background:linear-gradient(var(--bg),var(--bg2) 60%,var(--bg));color:var(--ink);font-family:Inter,Helvetica,Arial,sans-serif;line-height:1.7;overflow-x:hidden}
+#sky{position:fixed;inset:0;width:100%;height:100%;z-index:0}
+.wrap{position:relative;z-index:1;max-width:900px;margin:0 auto;padding:0 22px}
+.top{display:flex;justify-content:space-between;align-items:center;padding:20px 0;color:var(--soft);font-size:.95rem}
+.top b{font-family:"Cormorant Garamond",Georgia,serif;font-size:1.35rem;color:var(--gold)}
+.top nav{display:flex;gap:16px;flex-wrap:wrap}
+.top button{background:none;border:0;font:inherit;color:var(--soft);cursor:pointer;padding:4px 0}
+.top button:hover{color:var(--ink)}
+.hero{text-align:center;padding:70px 0 50px}
+.moon{font-size:3rem;filter:drop-shadow(0 0 22px var(--gold))}
+h1{font-family:"Cormorant Garamond",Georgia,serif;font-weight:700;font-size:clamp(3rem,12vw,6.6rem);line-height:1.02;margin:10px 0}
+h1 em{display:block;font-style:italic;color:var(--gold);text-shadow:0 0 38px rgba(255,209,102,.55)}
+.sub{color:var(--soft);margin:0}
+.count{display:flex;gap:12px;justify-content:center;margin:32px 0 10px;flex-wrap:wrap}
+.count div{background:rgba(16,28,74,.7);border:1px solid var(--line);border-radius:10px;padding:14px 10px;min-width:92px;backdrop-filter:blur(4px)}
+.count b{display:block;font-family:"Cormorant Garamond",serif;font-size:2.4rem;line-height:1.1;color:var(--sky)}
+.count span{font-size:.82rem;color:var(--soft)}
+.btn{font:inherit;font-weight:600;background:var(--gold);color:#1a1530;border:0;border-radius:999px;padding:13px 26px;cursor:pointer;margin-top:22px}
+.btn.ghost{background:transparent;color:var(--ink);border:1px solid var(--line)}
+section{padding:52px 0;border-top:1px solid var(--line)}
+h2{font-family:"Cormorant Garamond",Georgia,serif;font-size:2.2rem;line-height:1.15;margin:0 0 10px}
+.lead{max-width:60ch;color:var(--soft);margin:0}
+.grid{display:grid;grid-template-columns:repeat(auto-fit,minmax(210px,1fr));gap:16px;margin-top:26px}
+.card{background:rgba(16,28,74,.7);border:1px solid var(--line);border-radius:12px;padding:20px}
+.card h3{font-family:"Cormorant Garamond",serif;font-size:1.4rem;margin:0 0 4px;color:var(--gold)}
+.card p{margin:0;color:var(--soft);font-size:.96rem}
+.game{background:rgba(16,28,74,.7);border:1px solid var(--line);border-radius:14px;padding:18px;margin-top:22px}
+.bar{display:flex;justify-content:space-between;gap:10px;flex-wrap:wrap;color:var(--soft);margin-bottom:12px}
+.bar b{color:var(--ink)}
+#arena{position:relative;height:300px;border-radius:10px;background:radial-gradient(circle at 50% 120%,#1c2f7a,#08102e);overflow:hidden;touch-action:manipulation}
+.star{position:absolute;top:-40px;font-size:2rem;background:none;border:0;cursor:pointer;animation:fall linear forwards;padding:0}
+@keyframes fall{to{transform:translateY(360px)}}
+.ov{position:absolute;inset:0;display:grid;place-items:center;text-align:center;background:rgba(6,12,36,.7);padding:16px}
+#mem{display:grid;grid-template-columns:repeat(4,1fr);gap:10px;max-width:420px;margin:0 auto}
+.tile{aspect-ratio:1;font-size:2rem;border-radius:10px;border:1px solid var(--line);background:var(--line);color:transparent;cursor:pointer;transition:transform .25s}
+.tile.up{background:var(--card);color:inherit;transform:rotateY(0)}
+.tile.ok{background:#14506a;color:inherit}
+.candles{display:flex;justify-content:center;gap:20px;margin-top:26px;margin-bottom:-6px}
+.candle{background:none;border:0;cursor:pointer;padding:0;width:34px}
+.flame{display:block;width:14px;height:22px;margin:0 auto 2px;border-radius:50% 50% 50% 50%/60% 60% 40% 40%;background:#ffb927;box-shadow:0 0 18px 6px rgba(255,185,39,.7);transition:opacity .25s,transform .25s}
+.candle.off .flame{opacity:0;transform:scale(.3)}
+.wax{display:block;width:10px;height:44px;margin:0 auto;background:var(--sky);border-radius:3px}
+.layer{height:46px;border-radius:10px;margin:0 auto;background:var(--card);border:1px solid var(--line)}
+.layer.a{width:260px;border-bottom:10px solid var(--sky)}
+.layer.b{width:340px;max-width:100%;border-bottom:10px solid var(--gold)}
+.center{text-align:center}.center .lead{margin:0 auto}
+form{display:grid;gap:10px;max-width:560px;margin-top:20px}
+input,textarea{font:inherit;color:var(--ink);background:var(--card);border:1px solid var(--line);border-radius:8px;padding:11px 13px;width:100%}
+.wish{background:rgba(16,28,74,.7);border:1px solid var(--line);border-radius:10px;padding:14px 16px;margin-top:12px;max-width:560px}
+.wish small{color:var(--soft)}
+:focus-visible{outline:3px solid var(--gold);outline-offset:3px}
+footer{border-top:1px solid var(--line);padding:26px 0 40px;text-align:center;color:var(--soft);font-size:.92rem}
+#st{position:fixed;inset:0;z-index:20;background:#04081c;display:none;align-items:center;justify-content:center}
+#st.on{display:flex}
+.sc{position:relative;width:min(420px,100vw);height:min(760px,100%);display:flex;flex-direction:column;justify-content:center;text-align:center;padding:48px 30px;background:linear-gradient(160deg,#0b1538,#1b2a73)}
+.sc .bars{position:absolute;top:calc(14px + env(safe-area-inset-top,0px));left:14px;right:14px;display:flex;gap:5px}
+.sc .bars i{flex:1;height:3px;background:rgba(255,255,255,.25);border-radius:2px;overflow:hidden}
+.sc .bars i s{display:block;height:100%;width:0;background:var(--gold)}
+.sc .e{font-size:4rem}
+.sc h3{font-family:"Cormorant Garamond",serif;font-size:2.3rem;line-height:1.15;margin:12px 0}
+.sc p{color:var(--soft);margin:0}
+.sc .x{position:absolute;top:calc(28px + env(safe-area-inset-top,0px));right:16px;background:none;border:0;color:var(--ink);font-size:1.6rem;cursor:pointer}
+.sc .tap{position:absolute;top:60px;bottom:0;width:40%;background:none;border:0;cursor:pointer}
+.sc .tap.l{left:0}.sc .tap.r{right:0}
+canvas.cf{position:fixed;inset:0;width:100%;height:100%;pointer-events:none;z-index:30}
+</style>
+</head>
+<body>
+<canvas id="sky" aria-hidden="true"></canvas>
+<canvas class="cf" id="c" aria-hidden="true"></canvas>
+<div class="wrap">
+  <div class="top"><b>Nour Brother</b>
+    <nav><button data-go="stories">Stories</button><button data-go="games">Games</button><button data-go="wish">Wish</button><button data-go="wall">Wall</button></nav>
+  </div>
+
+  <header class="hero">
+    <div class="moon">🌙</div>
+    <p class="sub">Under tonight’s sky, one star shines brightest</p>
+    <h1>Happy Birthday,<em>Nour Brother</em></h1>
+    <p class="sub"><b>Sunday, November 1</b></p>
+    <div class="count" id="count"></div>
+    <p class="sub" id="status"></p>
+    <button class="btn" id="play">▶ Play his birthday story</button>
+  </header>
+
+  <section id="stories">
+    <h2>Why tonight is special</h2>
+    <p class="lead">A birthday is a quiet moment to say what usually goes unsaid.</p>
+    <div class="grid">
+      <div class="card"><h3>Always there</h3><p>First to show up, last to leave when someone needs a hand.</p></div>
+      <div class="card"><h3>Generous spirit</h3><p>Gives time, advice and attention without keeping score.</p></div>
+      <div class="card"><h3>Good humor</h3><p>Turns ordinary days into stories everyone keeps telling.</p></div>
+      <div class="card"><h3>Quiet strength</h3><p>Calm under pressure, steady for the whole family.</p></div>
+    </div>
+  </section>
+
+  <section id="games">
+    <h2>Birthday arcade</h2>
+    <p class="lead">Two quick games. Beat your own record.</p>
+
+    <div class="game">
+      <div class="bar"><span><b>Star catcher</b> — tap the falling stars</span><span>Score <b id="sc">0</b> · Time <b id="tm">20</b> · Best <b id="bs">0</b></span></div>
+      <div id="arena"><div class="ov" id="aov"><div><p>Catch as many stars as you can in 20 seconds. Gifts 🎁 are worth 3.</p><button class="btn" id="go">Start</button></div></div></div>
+    </div>
+
+    <div class="game">
+      <div class="bar"><span><b>Memory match</b> — find all the pairs</span><span>Moves <b id="mv">0</b> · Best <b id="mb">–</b></span></div>
+      <div id="mem"></div>
+      <div class="center"><button class="btn ghost" id="rs">Shuffle</button></div>
+    </div>
+  </section>
+
+  <section id="wish" class="center">
+    <h2>Blow out the candles</h2>
+    <p class="lead">Tap each candle, then make a wish.</p>
+    <div class="candles" id="candles"></div>
+    <div class="layer a"></div><div class="layer b"></div>
+    <p class="sub" id="hint" style="margin-top:14px">5 candles left</p>
+  </section>
+
+  <section id="wall">
+    <h2>Leave a birthday wish</h2>
+    <p class="lead">Write a message for him. It appears below.</p>
+    <form id="f">
+      <input id="n" placeholder="Your name" maxlength="30" required>
+      <textarea id="m" rows="3" placeholder="Your message" maxlength="240" required></textarea>
+      <button class="btn" type="submit" style="justify-self:start;margin-top:0">Post wish</button>
+    </form>
+    <div id="wishes"></div>
+  </section>
+  <footer>Made with love by his sister, Nour. Happy birthday!</footer>
+</div>
+
+<div id="st" role="dialog" aria-label="Birthday story"><div class="sc" id="sc2"></div></div>
+
+<script>
+(function(){
+  var still=matchMedia('(prefers-reduced-motion:reduce)').matches;
+  function $(i){return document.getElementById(i)}
+  // starry sky
+  var sk=$('sky'),sx=sk.getContext('2d'),S=[];
+  function rs(){sk.width=innerWidth;sk.height=innerHeight;S=[];for(var i=0;i<90;i++)S.push({x:Math.random()*sk.width,y:Math.random()*sk.height,r:Math.random()*1.4+.3,p:Math.random()*6})}
+  function sd(t){sx.clearRect(0,0,sk.width,sk.height);S.forEach(function(s){sx.globalAlpha=still?.7:.4+.6*Math.abs(Math.sin(t/1200+s.p));sx.fillStyle='#cfe0ff';sx.beginPath();sx.arc(s.x,s.y,s.r,0,7);sx.fill()});if(!still)requestAnimationFrame(sd)}
+  rs();addEventListener('resize',rs);requestAnimationFrame(sd);
+  // confetti
+  var cv=$('c'),cx=cv.getContext('2d'),P=[],run=false;
+  function cs(){cv.width=innerWidth;cv.height=innerHeight}cs();addEventListener('resize',cs);
+  function party(n){if(still)return;var c=['#ffd166','#6ec6ff','#ff7aa8','#5fd3b5','#fff'];for(var i=0;i<n;i++)P.push({x:Math.random()*cv.width,y:-10,vx:(Math.random()-.5)*3,vy:2+Math.random()*4,r:4+Math.random()*5,c:c[i%5],a:Math.random()*6,l:200+Math.random()*100});if(!run){run=true;requestAnimationFrame(tk)}}
+  function tk(){cx.clearRect(0,0,cv.width,cv.height);P=P.filter(function(p){return p.l>0&&p.y<cv.height+20});P.forEach(function(p){p.x+=p.vx;p.y+=p.vy;p.a+=.1;p.l--;cx.fillStyle=p.c;cx.fillRect(p.x,p.y,p.r,p.r*Math.abs(Math.cos(p.a))+1)});if(P.length)requestAnimationFrame(tk);else run=false}
+  document.querySelectorAll('[data-go]').forEach(function(b){b.onclick=function(){$(b.getAttribute('data-go')).scrollIntoView({behavior:still?'auto':'smooth'})}});
+
+  // countdown
+  function target(){var n=new Date(),y=n.getFullYear();return n>=new Date(y,10,2)?new Date(y+1,10,1):new Date(y,10,1)}
+  function render(){var now=new Date();
+    if(now.getMonth()===10&&now.getDate()===1){$('count').innerHTML='';$('status').textContent='Today is the day. Happy birthday! 🎉';return}
+    var s=Math.floor((target()-now)/1000),p=[[Math.floor(s/86400),'days'],[Math.floor(s%86400/3600),'hours'],[Math.floor(s%3600/60),'minutes'],[s%60,'seconds']];
+    $('count').innerHTML=p.map(function(x){return '<div><b>'+x[0]+'</b><span>'+x[1]+'</span></div>'}).join('');$('status').textContent='Until the big day'}
+  render();setInterval(render,1000);
+  var d=new Date();if(d.getMonth()===10&&d.getDate()===1)party(160);
+
+  // stories
+  var SL=[['🌙','A new chapter starts tonight','Another year, another reason to celebrate you.'],['🤝','Thank you for being there','For the advice, the laughs and the loyalty.'],['🚀','Here’s to the year ahead','Health, success, and big plans that actually happen.'],['🎂','Now go celebrate','Cake first. Everything else can wait.']],si=0,stT;
+  function show(){var h='<div class="bars">'+SL.map(function(_,i){return '<i><s style="width:'+(i<si?100:0)+'%"></s></i>'}).join('')+'</div><button class="x" aria-label="Close">×</button><button class="tap l" aria-label="Previous"></button><button class="tap r" aria-label="Next"></button><div class="e">'+SL[si][0]+'</div><h3>'+SL[si][1]+'</h3><p>'+SL[si][2]+'</p>';
+    $('sc2').innerHTML=h;var f=$('sc2').querySelectorAll('.bars s')[si];
+    if(f){f.style.transition=still?'none':'width 4s linear';requestAnimationFrame(function(){requestAnimationFrame(function(){f.style.width='100%'})})}
+    clearTimeout(stT);stT=setTimeout(nx,4000);
+    $('sc2').querySelector('.x').onclick=close;$('sc2').querySelector('.l').onclick=function(){si=Math.max(0,si-1);show()};$('sc2').querySelector('.r').onclick=nx}
+  function nx(){if(si>=SL.length-1){close();party(200);return}si++;show()}
+  function close(){clearTimeout(stT);$('st').classList.remove('on')}
+  $('play').onclick=function(){si=0;$('st').classList.add('on');show()};
+  addEventListener('keydown',function(e){if(e.key==='Escape')close()});
+
+  // star catcher
+  var sc=0,tl=20,best=0,iv,tv,live=false,ar=$('arena');
+  function spawn(){var b=document.createElement('button'),g=Math.random()<.18;b.className='star';b.textContent=g?'🎁':'⭐';b.setAttribute('aria-label',g?'Gift':'Star');
+    b.style.left=(Math.random()*(ar.clientWidth-44))+'px';b.style.animationDuration=(2.2+Math.random()*1.6)+'s';
+    b.onclick=function(){if(!live)return;sc+=g?3:1;$('sc').textContent=sc;b.remove()};b.addEventListener('animationend',function(){b.remove()});ar.appendChild(b)}
+  $('go').onclick=function(){sc=0;tl=20;live=true;$('sc').textContent=0;$('tm').textContent=20;$('aov').style.display='none';
+    iv=setInterval(spawn,550);tv=setInterval(function(){tl--;$('tm').textContent=tl;if(tl<=0){clearInterval(iv);clearInterval(tv);live=false;
+      ar.querySelectorAll('.star').forEach(function(x){x.remove()});if(sc>best){best=sc;$('bs').textContent=best}
+      $('aov').style.display='grid';$('aov').querySelector('p').textContent='Time’s up! You caught '+sc+' points.';$('go').textContent='Play again';if(sc>=15)party(120)}},1000)};
+
+  // memory
+  var EM=['🎂','🎁','🎈','⭐','🎉','🎵','🌙','🎊'],first=null,lock=false,mv=0,mb=0,ok=0;
+  function deal(){var a=EM.concat(EM).sort(function(){return Math.random()-.5}),m=$('mem');m.innerHTML='';mv=0;ok=0;first=null;$('mv').textContent=0;
+    a.forEach(function(e){var t=document.createElement('button');t.className='tile';t.textContent=e;t.setAttribute('aria-label','Card');
+      t.onclick=function(){if(lock||t.classList.contains('up')||t.classList.contains('ok'))return;t.classList.add('up');
+        if(!first){first=t;return}
+        mv++;$('mv').textContent=mv;var a1=first;first=null;
+        if(a1.textContent===t.textContent){a1.className=t.className='tile ok';ok++;if(ok===8){if(!mb||mv<mb){mb=mv;$('mb').textContent=mb}party(160)}}
+        else{lock=true;setTimeout(function(){a1.classList.remove('up');t.classList.remove('up');lock=false},700)}};
+      m.appendChild(t)})}
+  deal();$('rs').onclick=deal;
+
+  // candles
+  var cw=$('candles'),left=5;
+  for(var i=0;i<5;i++){var b=document.createElement('button');b.className='candle';b.setAttribute('aria-label','Candle '+(i+1));b.innerHTML='<span class="flame"></span><span class="wax"></span>';
+    b.onclick=function(){if(this.classList.contains('off'))return;this.classList.add('off');left--;
+      if(left===0){$('hint').textContent='🎂 Wish made. Happy birthday!';party(220)}else $('hint').textContent=left+(left===1?' candle left':' candles left')};cw.appendChild(b)}
+
+  // wishes
+  var list=$('wishes');
+  function add(n,m){var d=document.createElement('div');d.className='wish';var p=document.createElement('div');p.textContent=m;var s=document.createElement('small');s.textContent='— '+n;d.appendChild(p);d.appendChild(s);list.insertBefore(d,list.firstChild)}
+  add('Nour','Wishing you a year full of health, success and happiness. Love you always, big brother.');
+  $('f').onsubmit=function(e){e.preventDefault();add($('n').value.trim(),$('m').value.trim());this.reset();party(80)};
+})();
+</script>
+</body>
+</html>
